@@ -19,7 +19,7 @@ grunt.loadNpmTasks('grunt-file-status');
 
 Once the plugin has been installed, you need clone this repository. This system is based in Meteor.js.
 
-```Clone repository
+```js
 git clone git@github.com:wzalazar/meteor-file-status.git
 ```
 
