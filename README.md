@@ -55,14 +55,41 @@ A string value that is used to do something else with whatever else.
 In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
 ```js
-grunt.initConfig({
-  file_status: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+ grunt.initConfig({
+    fileStatus: {
+      connection:{
+        host: "localhost",
+        port: 3000,
+        path: "websocket",
+        ssl: false,
+        autoReconnect: true,
+        autoReconnectTimer: 500,
+        maintainCollections: true,
+        ddpVersion: '1'
+      },
+      login:{
+        email: "1@hotmail.com",
+        password: "1qaz2wsx"
+      }
     },
-  },
-});
+    watch: {
+      files: [
+            "js/{,**/}*.js"
+      ],
+      options: {
+        livereload: true,
+      }
+    },
+    notify_hooks: {
+      options: {
+        enabled: true,
+        max_jshint_notifications: 5, // maximum number of notifications from jshint output
+        title: "Project Name", // defaults to the name in package.json, or will use project directory's name
+        success: false, // whether successful grunt executions should be notified automatically
+        duration: 3 // the duration of notification in seconds, for `notify-send only
+      }
+    }
+  });
 ```
 
 #### Custom Options
