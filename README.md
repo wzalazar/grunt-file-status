@@ -17,6 +17,12 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-file-status');
 ```
 
+Once the plugin has been installed, you need clone this repository. This system is based in Meteor.js.
+
+```Clone repository
+git clone git@github.com:wzalazar/meteor-file-status.git
+```
+
 ## The "fileStatus" task
 
 ### Overview
