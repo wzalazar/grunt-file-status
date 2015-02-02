@@ -17,14 +17,14 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-file-status');
 ```
 
-## The "file_status" task
+## The "fileStatus" task
 
 ### Overview
-In your project's Gruntfile, add a section named `file_status` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `fileStatus` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  file_status: {
+  fileStatus: {
     options: {
       // Task-specific options go here.
     },
@@ -97,7 +97,7 @@ In this example, custom options are used to do something else with whatever else
 
 ```js
 grunt.initConfig({
-  file_status: {
+  fileStatus: {
     options: {
       separator: ': ',
       punctuation: ' !!!',
