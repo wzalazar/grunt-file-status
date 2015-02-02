@@ -1,6 +1,6 @@
 # grunt-file-status
 
-> Real time connection with others co-workers, minified conflicts with alert and resolve it's with a merge online
+> Real time connection with others co-workers, you will able to resolve the merge online
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
