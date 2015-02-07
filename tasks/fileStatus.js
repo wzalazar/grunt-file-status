@@ -105,8 +105,9 @@ module.exports = function(grunt) {
                             } else {
                                 for (var x = 0; x < result.modified.length; x++) {
                                     if (result.modified[x].userId === userId && modified.userId === userId) {
-                                        grunt.file.write(result.filepath, result.modified[x].file);
-                                        filepath= result.filepath;
+                                        var normalizeFilepath= grunt.util.normalizelf(result.filepath);
+                                        grunt.file.write(normalizeFilepath, result.modified[x].file);
+                                        filepath= normalizeFilepath;
                                     }
                                 }
                             }
@@ -138,10 +139,11 @@ module.exports = function(grunt) {
                 };
 
                 grunt.event.on('watch', function(action, filepath, target) {
-                    var file = grunt.file.read(filepath);
+                    var normalizeFilepath= grunt.util.normalizelf(filepath);
+                    var file = grunt.file.read(normalizeFilepath);
                     var change = {
                         userId: userId,
-                        filepath: filepath,
+                        filepath: normalizeFilepath,
                         modified: {
                             'userId': userId,
                             'action': action,
